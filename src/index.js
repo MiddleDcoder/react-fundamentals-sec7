@@ -1,14 +1,17 @@
 import React from 'react'; //React -> is a variable for the package 'react' (manage elements)
 import ReactDOM from 'react-dom/client';  //ReactDOM -> render the elements into the documents
+import './style.css'; // import style by the help of webpack
 
 // converter the variable to a function to avoid memory leak
 function Page() {
-  // .createElement() -> method for creating elements 3 parameter: 1.The Element 2.The Attribute 3.Inner Content
-  return React.createElement('div', null, [
-    React.createElement('h1', null, `Hi ${Date().toLocaleString()}`), //added date to current local time
-    React.createElement('p', null, 'Hello'),
-    React.createElement('p', null, 'Hey'),
-  ]);
+  // changed to JSX formatting for better readability and clean code
+  return (
+    <>
+      <h1 className="orange">Hello Wolrd</h1>
+      <p>Hey</p>
+      <p>Hi</p>
+    </>
+  );
 }
 const rootEl = document.querySelector('#root'); //.querySelector() -> to select the element root
 const root = ReactDOM.createRoot(rootEl); //this function accepts element from the document
