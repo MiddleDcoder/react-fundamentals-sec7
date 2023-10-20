@@ -7,7 +7,6 @@ const rootEl = document.querySelector('#root'); //.querySelector() -> to select 
 const root = ReactDOM.createRoot(rootEl); //this function accepts element from the document
 
 //special function for executing another function on an interval.
-setInterval(function () {
-  root.render(<Page />);  //change to component calling
-}, 1000);
+root.render(<Page />);  //change to component calling
 
+ 
