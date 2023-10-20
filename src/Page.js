@@ -1,5 +1,6 @@
 import React from 'react';
 import { Header } from './Header'; //importing the ./Header file with the { Header } function 
+import Counter from './Counter';
 
 // converter the variable to a function to avoid memory leak
 export default function() {
@@ -12,6 +13,7 @@ export default function() {
         <Header name={name} /> 
         <p>Hey</p>
         <p>Hi</p>
+        <Counter/>
       </>
     );
   }
